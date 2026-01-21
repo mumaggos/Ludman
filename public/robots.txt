@@ -11,7 +11,7 @@ Disallow: /admin
 Disallow: /*.json$
 Disallow: /*.js$
 
-Sitemap: https://lubdan.io/sitemap.xml
+Sitemap: https://lubdan.com/sitemap.xml
 
 # Crawl delay (in seconds)
 Crawl-delay: 1
