@@ -191,6 +191,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Whitepaper Page
     'whitepaper.title': 'Lubdan Whitepaper',
+    'whitepaper.disclaimer': 'Dieses Dokument ist die offizielle deutsche Version des Lubdan Whitepapers. Übersetzungen werden nur zur Information bereitgestellt.',
     'whitepaper.subtitle': 'Technical and Business Documentation',
     'whitepaper.disclaimer': 'This document is the official English version of the Lubdan Whitepaper. Translations are provided for convenience only.',
     'whitepaper.description': 'This whitepaper provides a comprehensive technical and business overview of the Lubdan (LBD) project, including its vision, technology infrastructure, tokenomics, and dividend distribution mechanism.',
@@ -222,7 +223,7 @@ const translations: Record<Language, Record<string, string>> = {
     'whitepaper.section12': '12. Legal Disclaimer',
     'whitepaper.section12.content': 'This whitepaper is provided for informational purposes only and does not constitute financial, investment, legal, or tax advice. Lubdan (LBD) is not a security and is not regulated as such. Investors should conduct their own research and consult with qualified advisors before making investment decisions. Past performance does not guarantee future results. Cryptocurrency investments carry significant risk, including the potential loss of principal.',
     'whitepaper.section13': '13. Official Channels',
-    'whitepaper.section13.content': 'Website: https://lubdan.io. X (Twitter): https://x.com/ludbanlbd. Telegram: https://t.me/LubdanOfficial. Email: lubdan.info@gmail.com. Only official channels above should be trusted for project information.',
+    'whitepaper.section13.content': 'Website: https://lubdan.com. X (Twitter): https://x.com/ludbanlbd. Telegram: https://t.me/LubdanOfficial. Email: lubdan.info@gmail.com. Only official channels above should be trusted for project information.',
     'whitepaper.toc': 'Table of Contents',
     'whitepaper.cta_title': 'Ready to Join Lubdan?',
     'whitepaper.cta_desc': 'After reviewing our whitepaper, join the presale and become part of the Lubdan community.',
@@ -416,6 +417,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Whitepaper Page
     'whitepaper.title': 'Whitepaper Lubdan',
+    'whitepaper.disclaimer': 'Este documento é a versão oficial em português do Lubdan Whitepaper. As traduções são fornecidas apenas para conveniência.',
     'whitepaper.subtitle': 'Documentação técnica e comercial completa',
     'whitepaper.description': 'Este whitepaper fornece uma visão geral abrangente do projeto Lubdan (LBD), incluindo sua visão, pilha de tecnologia, tokenomics e sistema de dividendos.',
     'whitepaper.download': 'Baixar PDF',
@@ -638,6 +640,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Whitepaper Page
     'whitepaper.title': 'Livre Blanc Lubdan',
+    'whitepaper.disclaimer': 'Ce document est la version officielle en français du Lubdan Whitepaper. Les traductions sont fournies à titre informatif uniquement.',
     'whitepaper.subtitle': 'Documentation technique et commerciale complète',
     'whitepaper.description': 'Ce livre blanc fournit un aperçu complet du projet Lubdan (LBD), y compris sa vision, sa pile technologique, sa tokenomique et son système de dividendes.',
     'whitepaper.download': 'Télécharger PDF',
@@ -860,6 +863,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Whitepaper Page
     'whitepaper.title': 'Lubdan Whitepaper',
+    'whitepaper.disclaimer': 'Dieses Dokument ist die offizielle deutsche Version des Lubdan Whitepapers. Übersetzungen werden nur zur Information bereitgestellt.',
     'whitepaper.subtitle': 'Vollständige technische und geschäftliche Dokumentation',
     'whitepaper.description': 'Dieses Whitepaper bietet einen umfassenden Überblick über das Lubdan (LBD) Projekt, einschließlich seiner Vision, Technologie-Stack, Tokenomik und Dividendensystem.',
     'whitepaper.download': 'PDF Herunterladen',
@@ -1304,6 +1308,7 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Whitepaper Page
     'whitepaper.title': 'Lubdanホワイトペーパー',
+    'whitepaper.disclaimer': 'このドキュメントはLubdan Whitepaperの公式日本語版です。翻訳は参考用に提供されています。',
     'whitepaper.subtitle': '完全な技術および商業ドキュメント',
     'whitepaper.description': 'このホワイトペーパーは、Lubdan (LBD)プロジェクトの包括的な概要を提供します。ビジョン、テクノロジースタック、トークノミクス、および配当システムを含みます。',
     'whitepaper.download': 'PDFをダウンロード',
