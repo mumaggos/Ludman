@@ -9,6 +9,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function FAQ() {
   const { t } = useLanguage();
+  const [showSecurityReview, setShowSecurityReview] = useState(false);
+  const [showLegalDisclosures, setShowLegalDisclosures] = useState(false);
   
   return (
     <Layout>
@@ -16,7 +18,7 @@ export default function FAQ() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-display font-bold mb-6 text-gold-glow">
-              {t('faq.title')} <span className="text-secondary text-neon">{t('faq.questions')}</span>
+              {t('faq.title')}
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t('faq.subtitle')}
@@ -79,14 +81,32 @@ export default function FAQ() {
                     <ExternalLink size={16} />
                     <span>{t('faq.transparency.whitepaper')}</span>
                   </a>
-                  <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                  <button 
+                    onClick={() => setShowSecurityReview(!showSecurityReview)}
+                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
+                  >
                     <ExternalLink size={16} />
-                    <span>{t('faq.transparency.audit')}</span>
-                  </a>
-                  <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                    <span>{t('faq.transparency.security')}</span>
+                  </button>
+                  {showSecurityReview && (
+                    <div className="mt-3 p-3 bg-secondary/10 rounded-lg text-xs text-muted-foreground border border-secondary/30">
+                      <p className="font-bold mb-2">Security Review</p>
+                      <p>The Lubdan (LBD) smart contracts are verified and publicly accessible on PolygonScan. The code has been reviewed using automated security analysis tools and manual checks to confirm: Fixed total supply, No mint functions, No blacklists, No hidden transfer taxes. Due to the ongoing presale phase and the absence of public liquidity, automated scanners may assign a low score. A full third-party audit is planned after liquidity deployment.</p>
+                    </div>
+                  )}
+                  <button 
+                    onClick={() => setShowLegalDisclosures(!showLegalDisclosures)}
+                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
+                  >
                     <ExternalLink size={16} />
-                    <span>{t('faq.transparency.kyc')}</span>
-                  </a>
+                    <span>{t('faq.transparency.legal')}</span>
+                  </button>
+                  {showLegalDisclosures && (
+                    <div className="mt-3 p-3 bg-secondary/10 rounded-lg text-xs text-muted-foreground border border-secondary/30">
+                      <p className="font-bold mb-2">Legal & Disclosures</p>
+                      <p>Lubdan (LBD) is a decentralized blockchain project. This website and its content do not constitute financial, legal, or investment advice. Participation in the presale involves risk, as detailed in the whitepaper.</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
