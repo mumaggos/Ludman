@@ -1303,4 +1303,73 @@ const translations: Record<Language, Record<string, string>> = {
     'whitepaper.section1': '1. はじめに',
     'whitepaper.section1.content': 'Lubdan (LBD)はPolygon上に構築された長期ブロックチェーンプロジェクトで、規律あるトークノミクス、透明なオンチェーンプレセールメカニクス、およびゲームビジネスエコシステムから生成された実際のMATIC配当分配を組み合わせるように設計されています。',
     'whitepaper.section2': '2. ビジョンと哲学',
-    'whitepaper.section2.content': 'Lubdanはアイルランドの民間伝承に触発され、Lubdanは知性、戦略、幸運を表しています。プロジェクト哲学は単純です：誇大広告よりも長期的な価値、透明なオンチェーンメカニズム、制御された供給リリース、および人工的な報酬ではなく実際の利回り
+    'whitepaper.section2.content': 'Lubdanはアイルランドの民間伝承に触発され、Lubdanは知性、戦略、幸運を表しています。プロジェクト哲学は単純です：誇大広告よりも長期的な価値、透明なオンチェーンメカニズム、制御された供給リリース、および人工的な報酬ではなく実際の利回り。',
+    'whitepaper.section3': '3. テクノロジースタック',
+    'whitepaper.section3.content': 'ブロックチェーン：Polygon（Ethereum Layer 2）。トークン標準：ERC-20互換。スマートコントラクトには、トークンコントラクト、プレセールコントラクト、および配当分配コントラクトが含まれます。',
+    'whitepaper.section4': '4. トークン概要',
+    'whitepaper.section4.content': 'トークン名：Lubdan。シンボル：LBD。ネットワーク：Polygon。総供給量：21,000,000 LBD。総供給量は固定されており、増加することはできません。',
+    'whitepaper.section5': '5. トークノミクス',
+    'whitepaper.section5.content': '分配：プレセール（9,450,000 LBD）、エコシステム、流動性と運営（予約）、チームと開発（ロック）、配当とカジノ運営（予約）。',
+    'whitepaper.section6': '6. トークンロックおよびロック解除メカニズム',
+    'whitepaper.section6.content': 'ホルダーを保護し、過度な売却圧力を回避するため：すべてのプレセールトークンはロックされています。ロック解除はプレセールとプラットフォーム立ち上げ後に開始されます。月ごとに10%ロック解除。総ロック解除期間：10ヶ月。',
+    'whitepaper.section7': '7. 配当システム（MATIC）',
+    'whitepaper.section7.content': 'Lubdanは実際の配当モデルを導入し、排出またはインフレーションベースの報酬ではありません。配当はカジノプラットフォーム利益から生成されたMATICで支払われ、専用のオンチェーン配当コントラクトを通じて分配されます。',
+    'whitepaper.section8': '8. 透明性とセキュリティ',
+    'whitepaper.section8.content': 'すべてのスマートコントラクトはPolygonにデプロイされています。コントラクトはPolygonScanで検証されています。プレセールデータ、トークン残高、および配当ロジックは完全にオンチェーンです。',
+    'whitepaper.section9': '9. ウェブサイトとユーザーエクスペリエンス',
+    'whitepaper.section9.content': 'Lubdanウェブサイトは以下を提供します：WalletConnectを介したウォレット接続、オンチェーンデータからのリアルタイムプレセール統計、MATICまたはUSDTでの安全な購入。',
+    'whitepaper.section10': '10. ロードマップ',
+    'whitepaper.section10.content': 'フェーズ1 – 基盤：スマートコントラクト開発、プレセール立ち上げ、ブランドとウェブサイトリリース。フェーズ2 – プラットフォーム開発：カジノプラットフォーム構築、法的準備とライセンス。',
+    'whitepaper.section11': '11. リスク開示',
+    'whitepaper.section11.content': '暗号通貨投資にはリスクが伴います。配当はプラットフォームのパフォーマンスと市場条件に依存します。利益の保証はありません。',
+    'whitepaper.section12': '12. 法的免責事項',
+    'whitepaper.section12.content': 'Lubdan (LBD)は財務アドバイスではありません。このドキュメント内のいかなる内容も、投資、法律、または税務アドバイスを構成するものではありません。',
+    'whitepaper.section13': '13. 公式チャネル',
+    'whitepaper.section13.content': 'ウェブサイト：lubdan.io。X（Twitter）：@LubdanToken。Telegram：https://t.me/LubdanOfficial',
+    'whitepaper.toc': '目次',
+    'whitepaper.cta_title': 'Lubdanに参加する準備はできていますか？',
+    'whitepaper.cta_desc': 'ホワイトペーパーを確認した後、プレセールに参加してLubdanコミュニティの一部になります。',
+    'whitepaper.join_presale': 'プレセールに参加',
+    'whitepaper.join_community': 'コミュニティに参加',
+    
+    // Not Found
+    'notfound.title': 'ページが見つかりません',
+    'notfound.message': 'お探しのページは存在しません。',
+    'notfound.return_home': 'ホームに戻る',
+  },
+};
+
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = useState<Language>('en');
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('language') as Language | null;
+    if (savedLanguage && translations[savedLanguage]) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+
+  const t = (key: string): string => {
+    const translation = translations[language][key as keyof typeof translations['en']];
+    return translation || key;
+  };
+
+  const handleSetLanguage = (lang: Language) => {
+    setLanguage(lang);
+    localStorage.setItem('language', lang);
+  };
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage: handleSetLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = (): LanguageContextType => {
+  const context = useContext(LanguageContext);
+  if (!context) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};
