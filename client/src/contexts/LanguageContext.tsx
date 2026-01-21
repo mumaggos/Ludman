@@ -128,6 +128,10 @@ const translations: Record<Language, Record<string, string>> = {
     'faq.transparency.resources': 'Resources',
     'faq.transparency.security': 'Security Review',
     'faq.transparency.legal': 'Legal & Disclosures',
+    'faq.transparency.security': 'Security Review',
+    'faq.transparency.legal': 'Legal & Disclosures',
+    'faq.transparency.security': 'Security Review',
+    'faq.transparency.legal': 'Legal & Disclosures',
     
     // Dividends Page
     'dividends.title': 'Real Yield in MATIC',
@@ -354,6 +358,8 @@ const translations: Record<Language, Record<string, string>> = {
     'faq.transparency.audit': 'Relatório de Auditoria',
     'faq.transparency.kyc': 'Informações KYC',
     'faq.transparency.resources': 'Recursos',
+    'faq.transparency.security': 'Análise de Segurança',
+    'faq.transparency.legal': 'Avisos Legais & Divulgações',
     
     // Dividends Page
     'dividends.title': 'Rendimento Real em MATIC',
@@ -577,6 +583,8 @@ const translations: Record<Language, Record<string, string>> = {
     'faq.transparency.audit': 'Rapport d\'Audit',
     'faq.transparency.kyc': 'Informations KYC',
     'faq.transparency.resources': 'Ressources',
+    'faq.transparency.security': 'Examen de Sécurité',
+    'faq.transparency.legal': 'Avis Juridiques & Divulgations',
     
     // Dividends Page
     'dividends.title': 'Rendement Réel en MATIC',
@@ -800,6 +808,8 @@ const translations: Record<Language, Record<string, string>> = {
     'faq.transparency.audit': 'Audit-Bericht',
     'faq.transparency.kyc': 'KYC-Informationen',
     'faq.transparency.resources': 'Ressourcen',
+    'faq.transparency.security': 'Sicherheitsprüfung',
+    'faq.transparency.legal': 'Rechtliche Hinweise & Offenlegungen',
     
     // Dividends Page
     'dividends.title': 'Echte Rendite in MATIC',
@@ -1023,6 +1033,8 @@ const translations: Record<Language, Record<string, string>> = {
     'faq.transparency.audit': '审计报告',
     'faq.transparency.kyc': 'KYC信息',
     'faq.transparency.resources': '资源',
+    'faq.transparency.security': '安全审查',
+    'faq.transparency.legal': '法律声明和披露',
     
     // Dividends Page
     'dividends.title': 'MATIC中的真实收益',
@@ -1245,6 +1257,8 @@ const translations: Record<Language, Record<string, string>> = {
     'faq.transparency.audit': '監査レポート',
     'faq.transparency.kyc': 'KYC情報',
     'faq.transparency.resources': 'リソース',
+    'faq.transparency.security': 'セキュリティレビュー',
+    'faq.transparency.legal': '法的通知と開示',
     
     // Dividends Page
     'dividends.title': 'MATICの実際の利回り',
