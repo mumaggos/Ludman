@@ -38,7 +38,7 @@ export default function PresaleWidget() {
   const { price: chainlinkMaticPrice, isLoading: isPriceLoading } = useChainlinkPrice();
 
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState<"MATIC" | "USDT" | "CARD">("MATIC");
+  const [currency, setCurrency] = useState<"MATIC" | "USDT">("MATIC");
   const [estimatedLBD, setEstimatedLBD] = useState(0);
   
   // Use Chainlink price if available, otherwise fallback to 0.50
@@ -133,36 +133,13 @@ export default function PresaleWidget() {
         </div>
 
         <Tabs defaultValue="MATIC" onValueChange={(v) => setCurrency(v as any)} className="w-full">
-          <TabsList className="grid w-full grid-cols-3 bg-background/50">
+          <TabsList className="grid w-full grid-cols-2 bg-background/50">
             <TabsTrigger value="MATIC">MATIC</TabsTrigger>
             <TabsTrigger value="USDT">USDT</TabsTrigger>
-            <TabsTrigger value="CARD">CARD</TabsTrigger>
           </TabsList>
           
           <div className="mt-6 space-y-4">
-            {currency === "CARD" ? (
-              <div className="text-center py-8 space-y-4">
-                <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <CreditCard className="h-8 w-8 text-primary" />
-                </div>
-                <div className="text-left space-y-2 bg-background/50 p-4 rounded-lg">
-                  <p className="text-sm font-semibold text-foreground">How it works:</p>
-                  <ol className="text-xs text-muted-foreground space-y-1 pl-4">
-                    <li className="list-decimal">Click button to go to Transak</li>
-                    <li className="list-decimal">Buy MATIC or USDT with card</li>
-                    <li className="list-decimal">Return and select MATIC/USDT tab</li>
-                    <li className="list-decimal">Buy LBD tokens</li>
-                  </ol>
-                </div>
-                <Button onClick={openTransak} className="w-full bg-primary text-primary-foreground hover:bg-primary/90" size="lg">
-                  Buy Crypto with Card <ExternalLinkIcon className="ml-2 h-4 w-4" />
-                </Button>
-                <p className="text-xs text-muted-foreground/50 mt-4">
-                  *Third-party provider. Lubdan does not store card details.
-                </p>
-              </div>
-            ) : (
-              <>
+            <>
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm text-muted-foreground">
                     <span>Pay with {currency}</span>
@@ -234,7 +211,6 @@ export default function PresaleWidget() {
                   )}
                 </Button>
               </>
-            )}
           </div>
         </Tabs>
       </div>
