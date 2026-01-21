@@ -5,7 +5,7 @@ import { usePresaleData } from "@/hooks/usePresale";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, TrendingUp, Coins, Zap } from "lucide-react";
 import { Link } from "wouter";
-import PresaleWidget from "@/components/PresaleWidget";
+
 import Newsletter from "@/components/Newsletter";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -61,18 +61,24 @@ export default function Home() {
             </motion.p>
             
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 h-14 rounded-xl shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all hover:scale-105"
-                onClick={() => document.getElementById('presale-section')?.scrollIntoView({ behavior: 'smooth' })}
-              >
-                {t('home.hero.join_presale')} <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href="/presale">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 h-14 rounded-xl shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all hover:scale-105"
+                >
+                  {t('home.hero.join_presale')} <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
               <Link href="/whitepaper">
                 <Button size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10 font-bold text-lg px-8 h-14 rounded-xl">
                   {t('home.hero.whitepaper')}
                 </Button>
               </Link>
+              <a href="https://polygonscan.com/token/0x7dd400E9141e3df10Fb24CcdE9B116C334F9542e" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" variant="outline" className="border-secondary/50 text-secondary hover:bg-secondary/10 font-bold text-lg px-8 h-14 rounded-xl">
+                  {t('home.hero.audited')} <ShieldCheck className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
             </motion.div>
 
             <motion.div variants={itemVariants} className="pt-4 flex items-center gap-8 text-sm text-muted-foreground">
@@ -132,7 +138,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Presale Section */}
+      {/* Presale CTA Section */}
       <section id="presale-section" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/5 skew-y-3 transform origin-top-left" />
         <div className="container mx-auto px-4 relative z-10">
@@ -144,7 +150,14 @@ export default function Home() {
           </div>
           
           <div className="flex justify-center">
-            <PresaleWidget />
+            <Link href="/presale">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-12 h-16 rounded-xl shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all hover:scale-105"
+              >
+                {t('home.presale.join_presale')} <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
