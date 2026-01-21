@@ -144,6 +144,12 @@ export default function Whitepaper() {
               </div>
             </div>
 
+            <div className="p-4 rounded-lg bg-secondary/10 border border-secondary/30 mb-8">
+              <p className="text-sm text-muted-foreground italic">
+                {t('whitepaper.disclaimer')}
+              </p>
+            </div>
+
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
               {t('whitepaper.description')}
             </p>

@@ -1,102 +1,195 @@
-// Whitepaper PDF content - Static content to avoid rendering issues
+// Whitepaper PDF content - Professional institutional version
 const WHITEPAPER_CONTENT = `
-Lubdan Platform - Whitepaper
+LUBDAN (LBD) WHITEPAPER
+Technical and Business Documentation
 
-1. Executive Summary
-Lubdan is a premium investment platform on Polygon offering real MATIC dividends from casino profits. 
-Our transparent, on-chain mechanics ensure every investor benefits from actual revenue generated.
+VERSION 1.0
+January 2026
 
-2. Introduction
-Lubdan represents a new era of cryptocurrency investment, combining the thrill of gaming with 
-the security of blockchain technology. Our platform distributes real dividends to token holders.
+DISCLAIMER
+This document is the official English version of the Lubdan Whitepaper. Translations are provided for convenience only.
 
-3. Platform Overview
-Built on Polygon (MATIC), Lubdan provides:
-- Real dividend distribution from casino profits
-- Transparent on-chain mechanics
-- Secure smart contracts
-- Community-driven governance
+================================================================================
 
-4. Revenue Model
-Our casino generates revenue through:
-- Player participation fees
-- House edge on games
-- Premium features
-- Sponsorship partnerships
+1. INTRODUCTION
 
-5. Dividend Distribution
-Token holders receive:
-- Weekly dividend distributions
-- Real MATIC payments
-- Transparent tracking
-- No staking requirements
+Lubdan (LBD) is a long-term blockchain project built on Polygon, designed to deliver disciplined tokenomics, transparent on-chain presale mechanics, and sustainable dividend distribution in MATIC. Unlike speculative projects, Lubdan prioritizes investor protection, supply discipline, and real yield generation through a gaming business ecosystem.
 
-6. Smart Contract Architecture
-Our contracts ensure:
-- Automatic dividend distribution
-- Secure fund management
-- Transparent accounting
-- Anti-manipulation measures
+================================================================================
 
-7. Tokenomics
-- Total Supply: 1,000,000 LBD
-- Presale Allocation: 30%
-- Community Rewards: 40%
-- Team & Development: 20%
-- Treasury: 10%
+2. VISION AND PHILOSOPHY
 
-8. Roadmap
-Phase 1: Platform Launch & Presale
-Phase 2: Casino Beta Testing
-Phase 3: Full Casino Launch
-Phase 4: Governance Implementation
+Lubdan is inspired by Irish folklore, where Lubdan represents intelligence, strategy, and fortune. Our project philosophy rests on four core principles:
 
-9. Security & Audits
-- Smart contracts audited by leading firms
-- Regular security assessments
-- Community transparency reports
-- Bug bounty program
+• Long-term value over hype
+• On-chain transparency and verifiability
+• Controlled supply release with investor protection
+• Real yield, not inflationary or artificial rewards
 
-10. Team & Advisors
-Our experienced team brings expertise in:
-- Blockchain development
-- Gaming industry
-- Finance & economics
-- Community management
+================================================================================
 
-11. Legal & Compliance
-- Registered entity in compliance jurisdiction
-- Legal review of all contracts
-- Regulatory monitoring
-- Community governance
+3. TECHNOLOGY STACK
 
-12. Risk Disclosure
-Investors should be aware of:
-- Cryptocurrency market volatility
-- Smart contract risks
-- Regulatory changes
-- Market adoption risks
+Blockchain Infrastructure: Polygon (Ethereum Layer 2) – selected for low transaction costs and high throughput.
 
-13. Conclusion
-Lubdan represents the future of investment platforms, combining innovation with transparency.
-Join our community and be part of the revolution.
+Token Standard: ERC-20 compatible.
+
+Smart Contracts:
+• Token contract (LBD)
+• Presale contract (presale mechanics)
+• Dividend distribution contract (MATIC distribution to holders)
+
+All contracts are deployed on Polygon mainnet and verified on PolygonScan.
+
+================================================================================
+
+4. TOKEN OVERVIEW
+
+Token Name: Lubdan
+Symbol: LBD
+Network: Polygon (Mainnet)
+Total Supply: 21,000,000 LBD (fixed, non-inflationary)
+
+The total supply is fixed at genesis and cannot be increased. This supply discipline is fundamental to the project's long-term sustainability and investor protection.
+
+================================================================================
+
+5. TOKENOMICS
+
+Total Supply Allocation: The 21,000,000 LBD tokens are allocated across:
+• Presale: 9,450,000 LBD
+• Ecosystem and liquidity provisioning (reserved and controlled on-chain)
+• Operational reserves (reserved)
+• Team and development (locked with linear vesting over 10 months)
+• Dividend-related reserves
+
+All allocations are managed transparently on-chain and subject to smart contract controls.
+
+================================================================================
+
+6. TOKEN LOCK AND UNLOCK MECHANISM
+
+Purpose: To protect holders and prevent excessive sell pressure during platform development.
+
+Mechanism: All presale tokens are locked upon distribution.
+
+Unlock Schedule: 10% per month over 10 months, beginning after presale closure and platform launch.
+
+Verification: All lock and unlock logic is executed by smart contract and verifiable on PolygonScan.
+
+================================================================================
+
+7. DIVIDEND SYSTEM (MATIC)
+
+Lubdan introduces a real dividend model based on actual platform revenue, not token emissions or inflation.
+
+Dividend Flow:
+Casino Operations → Net Profits → Dividend Smart Contract → MATIC Distribution to LBD Holders
+
+Key Principles:
+• Dividends are paid in MATIC (not new LBD tokens)
+• No inflation or dilution
+• Dividend amount depends on platform performance and profitability
+• Distribution is fully automated via smart contract
+• Holders must meet eligibility criteria (30-day holding period) to claim dividends
+
+================================================================================
+
+8. TRANSPARENCY AND SECURITY
+
+On-Chain Verification: All smart contracts are deployed on Polygon mainnet. Contracts are verified on PolygonScan for full transparency. Presale data, token balances, lock mechanisms, and dividend logic are fully on-chain and auditable.
+
+Security: Liquidity is locked to prevent rug pulls. Team tokens are vested linearly over 10 months. All transactions are immutable and verifiable on the blockchain.
+
+================================================================================
+
+9. WEBSITE AND USER EXPERIENCE
+
+Design Principles:
+• Non-custodial – users maintain full control of their private keys
+• Security-first – no private keys stored on servers
+
+User-Friendly Features:
+• Wallet connection via WalletConnect for secure authentication
+• Real-time presale statistics from on-chain data
+• Secure token purchasing with MATIC or USDT
+• Dashboard for tracking holdings, lock status, and claimable dividends
+
+================================================================================
+
+10. ROADMAP
+
+Phase 1 – Foundation (Current):
+• Smart contract development and audit
+• Presale launch on Polygon
+• Website and branding release
+• Community building
+
+Phase 2 – Platform Development:
+• Casino platform development and testing
+• Licensing and legal preparation
+• Liquidity provisioning
+• Public launch
+
+Phase 3 – Expansion and Sustainability:
+• Full platform launch
+• Public liquidity and trading
+• Ecosystem growth
+• Long-term operational optimization
+
+================================================================================
+
+11. RISK DISCLOSURE
+
+Market Risk: Cryptocurrency markets are volatile. LBD token price may fluctuate based on market conditions and investor sentiment.
+
+Performance Risk: Dividends depend on casino platform performance and profitability. There is no guarantee of profit or dividend distribution.
+
+Regulatory Risk: Cryptocurrency and gaming regulations are evolving globally. Changes in regulatory environment may impact project operations.
+
+Technical Risk: While smart contracts are audited, no code is entirely risk-free. Users should only invest amounts they can afford to lose.
+
+================================================================================
+
+12. LEGAL DISCLAIMER
+
+This whitepaper is provided for informational purposes only and does not constitute financial, investment, legal, or tax advice. Lubdan (LBD) is not a security and is not regulated as such. Investors should conduct their own research and consult with qualified advisors before making investment decisions. Past performance does not guarantee future results. Cryptocurrency investments carry significant risk, including the potential loss of principal.
+
+================================================================================
+
+13. OFFICIAL CHANNELS
+
+Website: https://lubdan.io
+X (Twitter): https://x.com/ludbanlbd
+Telegram: https://t.me/LubdanOfficial
+Email: lubdan.info@gmail.com
+
+Only official channels above should be trusted for project information.
+
+================================================================================
+
+END OF WHITEPAPER
+
+For the latest version and updates, visit: https://lubdan.io/whitepaper
 `;
 
 export const downloadWhitepaperPDF = async () => {
   try {
-    // Create a simple text-based PDF
-    const element = document.createElement('div');
-    element.style.padding = '20px';
-    element.style.fontFamily = 'Arial, sans-serif';
-    element.style.lineHeight = '1.6';
-    element.innerHTML = WHITEPAPER_CONTENT.replace(/\n/g, '<br />');
-    
-    // Use html2pdf if available, otherwise create a simple download
+    // Try to use html2pdf for better PDF generation
     const { default: html2pdf } = await import('html2pdf.js');
     
+    const element = document.createElement('div');
+    element.style.padding = '40px';
+    element.style.fontFamily = '"Courier New", monospace';
+    element.style.lineHeight = '1.8';
+    element.style.fontSize = '12px';
+    element.style.color = '#000';
+    element.style.backgroundColor = '#fff';
+    element.innerHTML = WHITEPAPER_CONTENT.replace(/\n/g, '<br />').replace(/ /g, '&nbsp;');
+    
     const opt = {
-      margin: 10,
-      filename: 'Lubdan-Whitepaper.pdf',
+      margin: 15,
+      filename: 'Lubdan-Whitepaper-v1.0.pdf',
       image: { type: 'jpeg', quality: 0.98 },
       html2canvas: { scale: 2, useCORS: true, allowTaint: true },
       jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' },
@@ -107,13 +200,23 @@ export const downloadWhitepaperPDF = async () => {
   } catch (error) {
     console.error('Error generating PDF:', error);
     // Fallback: Download as text file
+    fallbackDownloadAsText();
+  }
+};
+
+const fallbackDownloadAsText = () => {
+  try {
     const element = document.createElement('a');
     const file = new Blob([WHITEPAPER_CONTENT], { type: 'text/plain' });
     element.href = URL.createObjectURL(file);
-    element.download = 'Lubdan-Whitepaper.txt';
+    element.download = 'Lubdan-Whitepaper-v1.0.txt';
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
+    URL.revokeObjectURL(element.href);
+  } catch (err) {
+    console.error('Fallback download failed:', err);
+    alert('Unable to download whitepaper. Please try again later.');
   }
 };
 
@@ -122,16 +225,17 @@ export const shareWhitepaperPDF = async () => {
     if (navigator.share) {
       await navigator.share({
         title: 'Lubdan Whitepaper',
-        text: 'Check out the Lubdan Whitepaper - A premium investment platform on Polygon offering real MATIC dividends.',
+        text: 'Check out the Lubdan Whitepaper - A professional investment platform on Polygon offering real MATIC dividends. Built on transparency and long-term value.',
         url: window.location.href
       });
     } else {
       // Fallback: Copy to clipboard
-      const text = 'Check out the Lubdan Whitepaper: ' + window.location.href;
+      const text = 'Lubdan Whitepaper: ' + window.location.href;
       await navigator.clipboard.writeText(text);
-      alert('Link copied to clipboard!');
+      alert('Whitepaper link copied to clipboard!');
     }
   } catch (error) {
     console.error('Error sharing:', error);
+    // Silent fail for share - user can manually share
   }
 };
