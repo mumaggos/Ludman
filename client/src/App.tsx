@@ -16,24 +16,28 @@ import Dividends from "./pages/Dividends";
 import Roadmap from "./pages/Roadmap";
 import FAQ from "./pages/FAQ";
 import Whitepaper from "./pages/Whitepaper";
+import SocialFloatingButtons from "./components/SocialFloatingButtons";
 
 
 
 function Router() {
   return (
-    <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/presale"} component={Presale} />
-      <Route path={"/dashboard"} component={Dashboard} />
-      <Route path={"/dividends"} component={Dividends} />
-      <Route path={"/roadmap"} component={Roadmap} />
-      <Route path={"/faq"} component={FAQ} />
-      <Route path={"/whitepaper"} component={Whitepaper} />
-      <Route path={"/admin"} component={Admin} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
-      <Route component={NotFound} />
-    </Switch>
+    <>
+      <Switch>
+        <Route path={"/"} component={Home} />
+        <Route path={"/presale"} component={Presale} />
+        <Route path={"/dashboard"} component={Dashboard} />
+        <Route path={"/dividends"} component={Dividends} />
+        <Route path={"/roadmap"} component={Roadmap} />
+        <Route path={"/faq"} component={FAQ} />
+        <Route path={"/whitepaper"} component={Whitepaper} />
+        <Route path={"/admin"} component={Admin} />
+        <Route path={"/404"} component={NotFound} />
+        {/* Final fallback route */}
+        <Route component={NotFound} />
+      </Switch>
+      <SocialFloatingButtons />
+    </>
   );
 }
 

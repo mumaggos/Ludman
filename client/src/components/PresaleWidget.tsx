@@ -89,7 +89,7 @@ export default function PresaleWidget() {
   };
 
   const openTransak = () => {
-    const transakUrl = "https://global.transak.com/?defaultCryptoCurrency=MATIC&networks=polygon";
+    const transakUrl = "https://global.transak.com/?cryptoCurrencyCode=MATIC&networks=polygon&defaultCryptoCurrency=MATIC&defaultNetwork=polygon";
     window.open(transakUrl, "_blank");
   };
 
@@ -145,9 +145,15 @@ export default function PresaleWidget() {
                 <div className="mx-auto w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                   <CreditCard className="h-8 w-8 text-primary" />
                 </div>
-                <p className="text-sm text-muted-foreground">
-                  Buy MATIC or USDT directly with your credit card via Transak, then return here to purchase LBD.
-                </p>
+                <div className="text-left space-y-2 bg-background/50 p-4 rounded-lg">
+                  <p className="text-sm font-semibold text-foreground">How it works:</p>
+                  <ol className="text-xs text-muted-foreground space-y-1 pl-4">
+                    <li className="list-decimal">Click button to go to Transak</li>
+                    <li className="list-decimal">Buy MATIC or USDT with card</li>
+                    <li className="list-decimal">Return and select MATIC/USDT tab</li>
+                    <li className="list-decimal">Buy LBD tokens</li>
+                  </ol>
+                </div>
                 <Button onClick={openTransak} className="w-full bg-primary text-primary-foreground hover:bg-primary/90" size="lg">
                   Buy Crypto with Card <ExternalLinkIcon className="ml-2 h-4 w-4" />
                 </Button>
