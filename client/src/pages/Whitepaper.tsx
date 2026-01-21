@@ -5,7 +5,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
-import { generateWhitepaperPDF, shareWhitepaperPDF } from "@/lib/pdf-generator";
+import { downloadWhitepaperPDF, shareWhitepaperPDF } from "@/lib/pdf-generator";
 
 export default function Whitepaper() {
   const { t } = useLanguage();
@@ -85,7 +85,7 @@ export default function Whitepaper() {
   const handleDownload = async () => {
     setIsDownloading(true);
     try {
-      await generateWhitepaperPDF();
+      await downloadWhitepaperPDF();
     } catch (error) {
       console.error('Download failed:', error);
       alert('Failed to download PDF. Please try again.');

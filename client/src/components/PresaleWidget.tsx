@@ -89,7 +89,8 @@ export default function PresaleWidget() {
   };
 
   const openTransak = () => {
-    window.open("https://global.transak.com/?defaultCryptoCurrency=MATIC&network=polygon", "_blank");
+    const transakUrl = "https://global.transak.com/?defaultCryptoCurrency=MATIC&networks=polygon";
+    window.open(transakUrl, "_blank");
   };
 
   const progressPercent = (totalSold / PRESALE_CONFIG.PRESALE_TOTAL) * 100;
