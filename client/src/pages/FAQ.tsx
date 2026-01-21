@@ -90,8 +90,8 @@ export default function FAQ() {
                   </button>
                   {showSecurityReview && (
                     <div className="mt-3 p-3 bg-secondary/10 rounded-lg text-xs text-muted-foreground border border-secondary/30">
-                      <p className="font-bold mb-2">Security Review</p>
-                      <p>The Lubdan (LBD) smart contracts are verified and publicly accessible on PolygonScan. The code has been reviewed using automated security analysis tools and manual checks to confirm: Fixed total supply, No mint functions, No blacklists, No hidden transfer taxes. Due to the ongoing presale phase and the absence of public liquidity, automated scanners may assign a low score. A full third-party audit is planned after liquidity deployment.</p>
+                      <p className="font-bold mb-2">{t('faq.security_review.title')}</p>
+                      <p>{t('faq.security_review.content')}</p>
                     </div>
                   )}
                   <button 
@@ -103,8 +103,8 @@ export default function FAQ() {
                   </button>
                   {showLegalDisclosures && (
                     <div className="mt-3 p-3 bg-secondary/10 rounded-lg text-xs text-muted-foreground border border-secondary/30">
-                      <p className="font-bold mb-2">Legal & Disclosures</p>
-                      <p>Lubdan (LBD) is a decentralized blockchain project. This website and its content do not constitute financial, legal, or investment advice. Participation in the presale involves risk, as detailed in the whitepaper.</p>
+                      <p className="font-bold mb-2">{t('faq.legal.title')}</p>
+                      <p>{t('faq.legal.content')}</p>
                     </div>
                   )}
                 </div>
