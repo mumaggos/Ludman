@@ -3,60 +3,63 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Download, FileText } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Whitepaper() {
+  const { t } = useLanguage();
+
   const sections = [
     {
-      title: "1. Introduction",
-      content: "Lubdan (LBD) is a long-term blockchain project built on Polygon, designed to combine disciplined tokenomics, transparent on-chain presale mechanics, and real dividend distribution in MATIC generated from a gaming business ecosystem. The project focuses on sustainability, transparency, and alignment between the platform's growth and token holders, avoiding short-term speculation models."
+      titleKey: "whitepaper.section1",
+      contentKey: "whitepaper.section1.content"
     },
     {
-      title: "2. Vision & Philosophy",
-      content: "Lubdan is inspired by Irish folklore, where Lubdan represents intelligence, strategy, and fortune. The project philosophy is simple: Long-term value over hype, Transparent on-chain mechanisms, Controlled supply release, and Real yield, not artificial rewards. Lubdan is not a meme token. It is designed as a structured crypto investment project."
+      titleKey: "whitepaper.section2",
+      contentKey: "whitepaper.section2.content"
     },
     {
-      title: "3. Technology Stack",
-      content: "Blockchain: Polygon (Ethereum Layer 2). Token Standard: ERC-20 compatible. Smart Contracts include: Token contract, Presale contract, and Dividend distribution contract. Security features: Fully on-chain logic, Contracts verified on PolygonScan, and No centralized control over supply after deployment. Polygon was chosen for its low fees, fast transactions, and strong ecosystem support."
+      titleKey: "whitepaper.section3",
+      contentKey: "whitepaper.section3.content"
     },
     {
-      title: "4. Token Overview",
-      content: "Token Name: Lubdan. Symbol: LBD. Network: Polygon. Total Supply: 21,000,000 LBD. The total supply is fixed and cannot be inflated."
+      titleKey: "whitepaper.section4",
+      contentKey: "whitepaper.section4.content"
     },
     {
-      title: "5. Tokenomics",
-      content: "Distribution: Presale (9,450,000 LBD), Ecosystem, Liquidity & Operations (Reserved), Team & Development (Locked), Dividends & Casino Operations (Reserved). Presale Phases: Phase 1 - 6,300,000 LBD at $0.20 (Early participant access), Phase 2 - 3,150,000 LBD at $0.60 (Final presale stage). Presale purchases can be made using MATIC or USDT, with pricing enforced directly on-chain."
+      titleKey: "whitepaper.section5",
+      contentKey: "whitepaper.section5.content"
     },
     {
-      title: "6. Token Lock & Unlock Mechanism",
-      content: "To protect holders and prevent excessive sell pressure: All presale tokens are locked. Unlock begins after presale and platform launch. 10% unlock per month. Total unlock duration: 10 months. This mechanism ensures: Gradual market supply, Alignment between holders and long-term project growth, and Reduced risk of sudden dumps."
+      titleKey: "whitepaper.section6",
+      contentKey: "whitepaper.section6.content"
     },
     {
-      title: "7. Dividend System (MATIC)",
-      content: "Lubdan introduces a real dividend model, not emissions or inflation-based rewards. Dividends are paid in MATIC generated from casino platform profits and distributed via a dedicated on-chain dividend contract. Eligibility Rules: Holder must own LBD tokens for at least 30 days. Dividends are proportional to token holdings. Distribution is claim-based. If dividends are not claimed immediately, they remain available and can be claimed later."
+      titleKey: "whitepaper.section7",
+      contentKey: "whitepaper.section7.content"
     },
     {
-      title: "8. Transparency & Security",
-      content: "All smart contracts are deployed on Polygon. Contracts are verified on PolygonScan. Presale data, token balances, and dividend logic are fully on-chain. No hidden minting functions. No manual manipulation of presale phases via the website. The website only reads and interacts with smart contracts — it does not control them."
+      titleKey: "whitepaper.section8",
+      contentKey: "whitepaper.section8.content"
     },
     {
-      title: "9. Website & User Experience",
-      content: "The Lubdan website provides: Wallet connection via WalletConnect, Real-time presale statistics from on-chain data, Secure purchasing with MATIC or USDT, Investor dashboard showing token balance, holding duration, dividend eligibility, and claimable dividends. Mobile users are advised to use wallet in-app browsers for optimal experience."
+      titleKey: "whitepaper.section9",
+      contentKey: "whitepaper.section9.content"
     },
     {
-      title: "10. Roadmap",
-      content: "Phase 1 – Foundation: Smart contract development, Presale launch, Branding & website release. Phase 2 – Platform Development: Casino platform build, Licensing and legal preparation, Security reviews. Phase 3 – Launch: Casino launch, Liquidity expansion, Dividend activation. Phase 4 – Growth: Ecosystem expansion, Additional features, Marketing and partnerships, Potential professional audit."
+      titleKey: "whitepaper.section10",
+      contentKey: "whitepaper.section10.content"
     },
     {
-      title: "11. Risk Disclosure",
-      content: "Cryptocurrency investments involve risk. Dividends depend on platform performance and market conditions. There is no guarantee of profit. Participants should only invest what they can afford to lose and comply with their local regulations."
+      titleKey: "whitepaper.section11",
+      contentKey: "whitepaper.section11.content"
     },
     {
-      title: "12. Legal Disclaimer",
-      content: "Lubdan (LBD) is not financial advice. Nothing in this document constitutes investment, legal, or tax advice. By participating, users accept full responsibility for their actions and decisions."
+      titleKey: "whitepaper.section12",
+      contentKey: "whitepaper.section12.content"
     },
     {
-      title: "13. Official Channels",
-      content: "Website: lubdan.io. X (Twitter): @LubdanToken. Telegram: https://t.me/LubdanOfficial. Support: lubdan.info@gmail.com"
+      titleKey: "whitepaper.section13",
+      contentKey: "whitepaper.section13.content"
     }
   ];
 
@@ -88,7 +91,7 @@ export default function Whitepaper() {
             <Link href="/">
               <a className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                 <ArrowLeft size={20} />
-                <span>Back to Home</span>
+                <span>{t('whitepaper.back')}</span>
               </a>
             </Link>
           </motion.div>
@@ -105,16 +108,16 @@ export default function Whitepaper() {
               </div>
               <div>
                 <h1 className="text-5xl md:text-6xl font-display font-bold text-foreground">
-                  Lubdan Whitepaper
+                  {t('whitepaper.title')}
                 </h1>
                 <p className="text-muted-foreground mt-2">
-                  Complete technical and business documentation
+                  {t('whitepaper.subtitle')}
                 </p>
               </div>
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              This whitepaper provides a comprehensive overview of the Lubdan (LBD) project, including its vision, technology stack, tokenomics, and dividend system. Lubdan is a long-term blockchain project built on Polygon, designed for sustainability, transparency, and real yield.
+              {t('whitepaper.description')}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -123,14 +126,14 @@ export default function Whitepaper() {
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
               >
                 <Download className="mr-2 h-5 w-5" />
-                Download PDF
+                {t('whitepaper.download')}
               </Button>
               <Button 
                 size="lg"
                 variant="outline"
                 className="border-primary/50 text-primary hover:bg-primary/10"
               >
-                Share Document
+                {t('whitepaper.share')}
               </Button>
             </div>
           </motion.div>
@@ -154,10 +157,10 @@ export default function Whitepaper() {
               >
                 <div className="p-8 rounded-2xl glass-card hover:border-primary/50 transition-all duration-300 border border-primary/20">
                   <h2 className="text-2xl md:text-3xl font-display font-bold text-primary mb-4">
-                    {section.title}
+                    {t(section.titleKey)}
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    {section.content}
+                    {t(section.contentKey)}
                   </p>
                 </div>
               </motion.div>
@@ -170,7 +173,7 @@ export default function Whitepaper() {
             className="mt-20 p-8 rounded-2xl glass-card border border-primary/20"
           >
             <h3 className="text-2xl font-display font-bold text-primary mb-6">
-              Table of Contents
+              {t('whitepaper.toc')}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {sections.map((section, index) => (
@@ -179,7 +182,7 @@ export default function Whitepaper() {
                   href={`#section-${index}`}
                   className="text-muted-foreground hover:text-primary transition-colors py-2 border-b border-border/30 hover:border-primary/50"
                 >
-                  {section.title}
+                  {t(section.titleKey)}
                 </a>
               ))}
             </div>
@@ -191,20 +194,20 @@ export default function Whitepaper() {
             className="mt-20 p-12 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 text-center"
           >
             <h3 className="text-3xl font-display font-bold text-foreground mb-4">
-              Ready to Join Lubdan?
+              {t('whitepaper.cta_title')}
             </h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              After reviewing our whitepaper, join the presale and become part of the Lubdan community.
+              {t('whitepaper.cta_desc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/presale">
                 <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold">
-                  Join Presale
+                  {t('whitepaper.join_presale')}
                 </Button>
               </Link>
-              <a href="https://t.me/LubdanOfficial" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/ludban_lbd" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
-                  Join Community
+                  {t('whitepaper.join_community')}
                 </Button>
               </a>
             </div>

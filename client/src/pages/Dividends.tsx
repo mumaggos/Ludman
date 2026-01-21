@@ -3,8 +3,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { ArrowRight, Coins, Clock, Lock, RefreshCw } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Dividends() {
+  const { t } = useLanguage();
+
   return (
     <Layout>
       <div className="min-h-screen pt-20 pb-20">
@@ -16,11 +19,10 @@ export default function Dividends() {
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-6xl font-display font-bold mb-6 text-gold-glow"
             >
-              Real Yield in <span className="text-secondary text-neon">MATIC</span>
+              {t('dividends.title')} <span className="text-secondary text-neon">MATIC</span>
             </motion.h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Lubdan is not just a token; it's a share in a revenue-generating ecosystem. 
-              Profits from our casino operations are distributed directly to holders via smart contracts.
+              {t('dividends.subtitle')}
             </p>
           </div>
 
@@ -32,26 +34,26 @@ export default function Dividends() {
             <StepCard 
               number="01"
               icon={<Coins className="h-8 w-8 text-primary" />}
-              title="Buy LBD"
-              description="Purchase LBD tokens during the presale or on the open market after launch."
+              title={t('dividends.step1.title')}
+              description={t('dividends.step1.desc')}
             />
             <StepCard 
               number="02"
               icon={<Clock className="h-8 w-8 text-secondary" />}
-              title="Hold for 30 Days"
-              description="Keep your tokens in your wallet. The smart contract tracks your holding time automatically."
+              title={t('dividends.step2.title')}
+              description={t('dividends.step2.desc')}
             />
             <StepCard 
               number="03"
               icon={<Lock className="h-8 w-8 text-primary" />}
-              title="Unlock Eligibility"
-              description="After 30 days, your wallet address is whitelisted to claim pending dividends."
+              title={t('dividends.step3.title')}
+              description={t('dividends.step3.desc')}
             />
             <StepCard 
               number="04"
               icon={<RefreshCw className="h-8 w-8 text-secondary" />}
-              title="Claim & Repeat"
-              description="Claim your MATIC rewards via the Dashboard. Unclaimed rewards accumulate indefinitely."
+              title={t('dividends.step4.title')}
+              description={t('dividends.step4.desc')}
             />
           </div>
 
@@ -62,26 +64,26 @@ export default function Dividends() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-display font-bold mb-6 text-gold-glow">Sustainable Revenue Model</h2>
+              <h2 className="text-3xl font-display font-bold mb-6 text-gold-glow">{t('dividends.revenue_model')}</h2>
               <div className="space-y-6 text-muted-foreground">
                 <p>
-                  Unlike Ponzi-nomics that rely on new investors to pay old ones, Lubdan's yield comes from external revenue: <strong className="text-primary">The Lubdan Casino</strong>.
+                  {t('dividends.revenue_desc')}
                 </p>
                 <p>
-                  A portion of all house edge profits from our casino games (Slots, Poker, Roulette) is converted to MATIC and sent to the Dividend Distributor contract.
+                  {t('dividends.casino_profits')}
                 </p>
                 <ul className="space-y-3 mt-4">
                   <li className="flex items-center gap-3">
                     <div className="h-2 w-2 rounded-full bg-secondary shadow-[0_0_10px_rgba(0,255,65,0.5)]" />
-                    <span>100% On-Chain Transparency</span>
+                    <span>{t('dividends.transparency')}</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="h-2 w-2 rounded-full bg-secondary shadow-[0_0_10px_rgba(0,255,65,0.5)]" />
-                    <span>No Staking Required (Just Hold)</span>
+                    <span>{t('dividends.no_staking')}</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="h-2 w-2 rounded-full bg-secondary shadow-[0_0_10px_rgba(0,255,65,0.5)]" />
-                    <span>Anti-Dump Protection (30-Day Rule)</span>
+                    <span>{t('dividends.anti_dump')}</span>
                   </li>
                 </ul>
               </div>
@@ -95,20 +97,20 @@ export default function Dividends() {
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 blur-3xl rounded-full" />
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/10 blur-3xl rounded-full" />
-              <h3 className="text-xl font-bold mb-6 text-primary">Dividend Contract Stats</h3>
+              <h3 className="text-xl font-bold mb-6 text-primary">{t('dividends.contract_stats')}</h3>
               
               <div className="space-y-6 relative z-10">
                 <div>
-                  <p className="text-sm text-muted-foreground mb-1">Contract Address</p>
+                  <p className="text-sm text-muted-foreground mb-1">{t('dividends.contract_address')}</p>
                   <p className="font-mono text-xs md:text-sm text-secondary break-all">0xDD32982ce5533e9908c332982c5615690bF20EBc</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 rounded-xl bg-background/50 border border-border/30">
-                    <p className="text-xs text-muted-foreground mb-1">Total Paid</p>
+                    <p className="text-xs text-muted-foreground mb-1">{t('dividends.total_paid')}</p>
                     <p className="text-xl font-bold text-foreground">0 MATIC</p>
                   </div>
                   <div className="p-4 rounded-xl bg-background/50 border border-border/30">
-                    <p className="text-xs text-muted-foreground mb-1">Holders Eligible</p>
+                    <p className="text-xs text-muted-foreground mb-1">{t('dividends.holders_eligible')}</p>
                     <p className="text-xl font-bold text-foreground">0</p>
                   </div>
                 </div>
@@ -120,7 +122,7 @@ export default function Dividends() {
           <div className="text-center">
             <Link href="/dashboard">
               <Button size="lg" className="text-lg px-8 py-6 bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                Check Your Eligibility <ArrowRight className="ml-2 h-5 w-5" />
+                {t('dividends.check_eligibility')} <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
           </div>

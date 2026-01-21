@@ -166,11 +166,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Button>
             
             <div className="mt-auto mb-8 flex justify-center gap-6">
-              <a href="https://t.me/LubdanOfficial" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
-                <Send size={24} />
+              <a href="https://x.com/ludbanlbd?s=21" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
-              <a href="mailto:lubdan.info@gmail.com" className="text-muted-foreground hover:text-primary">
-                <Mail size={24} />
+              <a href="https://t.me/ludban_lbd" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
+                <Send size={24} />
               </a>
             </div>
           </motion.div>
@@ -195,10 +195,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 {t('footer.description')}
               </p>
               <div className="flex gap-4">
-                <a href="https://x.com/LubdanToken" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
+                  <a href="https://x.com/ludbanlbd?s=21" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
-                <a href="https://t.me/LubdanOfficial" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
+                <a href="https://t.me/ludban_lbd" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
                   <Send size={18} />
                 </a>
                 <a href="mailto:lubdan.info@gmail.com" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
@@ -253,18 +253,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </footer>
 
-      {/* Floating Telegram Button */}
-      <a 
-        href="https://t.me/LubdanOfficial" 
-        target="_blank" 
-        rel="noreferrer"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#0088cc] text-white flex items-center justify-center shadow-[0_0_20px_rgba(0,136,204,0.4)] hover:scale-110 transition-transform group"
-      >
-        <Send size={24} className="-ml-1 mt-1" />
-        <span className="absolute right-full mr-4 bg-card border border-border px-3 py-1 rounded-md text-xs font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-          Join Telegram
-        </span>
-      </a>
+
     </div>
   );
 }

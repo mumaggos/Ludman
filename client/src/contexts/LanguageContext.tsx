@@ -1339,13 +1339,48 @@ const translations: Record<Language, Record<string, string>> = {
   },
 };
 
+const getDefaultLanguage = (): Language => {
+  // Check if language is saved in localStorage
+  const savedLanguage = localStorage.getItem('language') as Language | null;
+  if (savedLanguage && translations[savedLanguage]) {
+    return savedLanguage;
+  }
+
+  // Auto-detect language based on browser locale
+  const browserLang = navigator.language.toLowerCase();
+  const langMap: Record<string, Language> = {
+    'pt': 'pt',
+    'pt-br': 'pt',
+    'pt-pt': 'pt',
+    'fr': 'fr',
+    'fr-fr': 'fr',
+    'de': 'de',
+    'de-de': 'de',
+    'zh': 'zh',
+    'zh-cn': 'zh',
+    'zh-tw': 'zh',
+    'ja': 'ja',
+    'ja-jp': 'ja',
+    'ko': 'ko',
+    'ko-kr': 'ko',
+  };
+
+  const detectedLang = langMap[browserLang] || langMap[browserLang.split('-')[0]];
+  return detectedLang || 'en';
+};
+
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(getDefaultLanguage);
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem('language') as Language | null;
     if (savedLanguage && translations[savedLanguage]) {
       setLanguage(savedLanguage);
+    } else if (!savedLanguage) {
+      // First time visitor - set based on browser language
+      const defaultLang = getDefaultLanguage();
+      setLanguage(defaultLang);
+      localStorage.setItem('language', defaultLang);
     }
   }, []);
 

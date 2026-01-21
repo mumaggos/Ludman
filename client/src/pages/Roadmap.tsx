@@ -1,8 +1,11 @@
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { CheckCircle2, Circle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Roadmap() {
+  const { t } = useLanguage();
+
   return (
     <Layout>
       <div className="min-h-screen pt-20 pb-20">
@@ -13,10 +16,10 @@ export default function Roadmap() {
               animate={{ opacity: 1, y: 0 }}
               className="text-4xl md:text-6xl font-display font-bold mb-6 text-gold-glow"
             >
-              Strategic <span className="text-secondary text-neon">Roadmap</span>
+              {t('roadmap.title')} <span className="text-secondary text-neon">{t('roadmap.phase1')}</span>
             </motion.h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Our path to building a sustainable, revenue-generating ecosystem.
+              {t('roadmap.subtitle')}
             </p>
           </div>
 
@@ -26,57 +29,57 @@ export default function Roadmap() {
 
             <div className="space-y-12 md:space-y-24">
               <RoadmapItem 
-                phase="Phase 1"
-                title="Foundation & Presale"
+                phase={t('roadmap.phase1')}
+                title={t('roadmap.phase1.title')}
                 status="current"
                 items={[
-                  "Smart Contract Development & Audit",
-                  "Website & Branding Launch",
-                  "Community Building (Twitter/Telegram)",
-                  "Presale Launch (Phase 1 & 2)",
-                  "Marketing Campaign Kickoff"
+                  t('roadmap.phase1.item1'),
+                  t('roadmap.phase1.item2'),
+                  t('roadmap.phase1.item3'),
+                  t('roadmap.phase1.item4'),
+                  t('roadmap.phase1.item5')
                 ]}
                 alignment="left"
               />
               
               <RoadmapItem 
-                phase="Phase 2"
-                title="Casino Development"
+                phase={t('roadmap.phase2')}
+                title={t('roadmap.phase2.title')}
                 status="upcoming"
                 items={[
-                  "Casino Platform Beta Development",
-                  "Legal & Licensing Framework",
-                  "Partnership Announcements",
-                  "Presale Conclusion",
-                  "Token Generation Event (TGE)"
+                  t('roadmap.phase2.item1'),
+                  t('roadmap.phase2.item2'),
+                  t('roadmap.phase2.item3'),
+                  t('roadmap.phase2.item4'),
+                  t('roadmap.phase2.item5')
                 ]}
                 alignment="right"
               />
 
               <RoadmapItem 
-                phase="Phase 3"
-                title="Launch & Revenue"
+                phase={t('roadmap.phase3')}
+                title={t('roadmap.phase3.title')}
                 status="upcoming"
                 items={[
-                  "Lubdan Casino Official Launch",
-                  "DEX Listing (Uniswap/Quickswap)",
-                  "Liquidity Locking",
-                  "First Dividend Distribution",
-                  "CoinGecko & CMC Listing"
+                  t('roadmap.phase3.item1'),
+                  t('roadmap.phase3.item2'),
+                  t('roadmap.phase3.item3'),
+                  t('roadmap.phase3.item4'),
+                  t('roadmap.phase3.item5')
                 ]}
                 alignment="left"
               />
 
               <RoadmapItem 
-                phase="Phase 4"
-                title="Expansion & Growth"
+                phase={t('roadmap.phase4')}
+                title={t('roadmap.phase4.title')}
                 status="upcoming"
                 items={[
-                  "CEX Listings",
-                  "Casino Game Expansion (Live Dealer)",
-                  "Mobile App Development",
-                  "Strategic Buyback & Burn",
-                  "Global Marketing Push"
+                  t('roadmap.phase4.item1'),
+                  t('roadmap.phase4.item2'),
+                  t('roadmap.phase4.item3'),
+                  t('roadmap.phase4.item4'),
+                  t('roadmap.phase4.item5')
                 ]}
                 alignment="right"
               />
