@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import PresaleWidget from "@/components/PresaleWidget";
+import HowToBuyCollapsible from "@/components/HowToBuyCollapsible";
 import { usePresaleData } from "@/hooks/usePresale";
 import { motion } from "framer-motion";
 import { PRESALE_CONFIG } from "@/lib/contracts";
@@ -46,6 +47,7 @@ export default function Presale() {
               transition={{ delay: 0.2 }}
               className="space-y-8"
             >
+              <HowToBuyCollapsible />
               <div className="glass-card rounded-2xl p-8">
                 <h3 className="text-2xl font-display font-bold mb-6 text-primary">{t('presale.structure')}</h3>
                 
@@ -111,8 +113,10 @@ export default function Presale() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
+              className="space-y-8"
             >
               <PresaleWidget />
+              <HowToBuyCollapsible />
             </motion.div>
           </div>
         </div>
