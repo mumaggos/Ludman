@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -20,20 +20,10 @@ export default function HowToBuyCollapsible() {
             Need MATIC or USDT?
           </p>
           <div className="flex gap-3 mt-2">
-            <a
-              href="https://buy.onramper.com/?defaultCrypto=MATIC&network=polygon"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="text-sm text-primary hover:text-secondary transition-colors underline"
-            >
-              Buy with card
-            </a>
-            <span className="text-muted-foreground">•</span>
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                setIsOpen(!isOpen);
+                setIsOpen(true);
               }}
               className="text-sm text-primary hover:text-secondary transition-colors underline"
             >
@@ -59,8 +49,21 @@ export default function HowToBuyCollapsible() {
             className="overflow-hidden"
           >
             <div className="glass-card rounded-2xl p-8 border-primary/30 space-y-6">
+              {/* IMPORTANT Warning */}
+              <div className="bg-secondary/10 border border-secondary/30 rounded-lg p-4 flex gap-3">
+                <AlertCircle className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+                <div className="text-sm text-muted-foreground">
+                  <p className="font-bold text-foreground mb-1">IMPORTANT:</p>
+                  <p>
+                    To participate in the LBD presale you must have MATIC or USDT on the Polygon network.
+                    Funds sent on other networks (e.g., Ethereum, BSC) will not work here.
+                  </p>
+                </div>
+              </div>
+
+              {/* How to Buy LBD */}
               <div>
-                <h3 className="text-xl font-display font-bold text-primary mb-4">
+                <h3 className="text-xl font-display font-bold text-primary mb-6">
                   How to Buy LBD
                 </h3>
 
@@ -68,7 +71,7 @@ export default function HowToBuyCollapsible() {
                 <div className="space-y-4 mb-8">
                   <div>
                     <p className="font-semibold text-foreground mb-3">
-                      If you already have MATIC or USDT
+                      If you already have MATIC or USDT (Polygon)
                     </p>
                     <div className="flex items-start gap-3 text-sm text-muted-foreground">
                       <span className="text-primary font-bold">→</span>
@@ -91,20 +94,24 @@ export default function HowToBuyCollapsible() {
                   <ol className="space-y-3 text-sm text-muted-foreground">
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold">1.</span>
-                      <span>Buy MATIC or USDT with card (see buttons below)</span>
+                      <span>Click Buy MATIC/USDT with Card</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold">2.</span>
-                      <span>Connect your wallet</span>
+                      <span>In the provider, select MATIC or USDT and choose Polygon network</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold">3.</span>
-                      <span>Choose the amount</span>
+                      <span>Complete the card payment (crypto will arrive in your wallet)</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold">4.</span>
                       <span>
-                        Click{" "}
+                        Return here, click{" "}
+                        <span className="text-primary font-semibold">
+                          Connect Wallet
+                        </span>
+                        , choose the amount and press{" "}
                         <span className="text-primary font-semibold">
                           Buy Token Now
                         </span>
@@ -114,46 +121,27 @@ export default function HowToBuyCollapsible() {
                 </div>
               </div>
 
-              {/* Buttons */}
-              <div className="space-y-3">
-                <p className="text-sm font-semibold text-foreground">
-                  Buy MATIC or USDT with Card:
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <a
-                    href="https://buy.onramper.com/?defaultCrypto=MATIC&network=polygon"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block"
+              {/* Single Button */}
+              <div className="space-y-3 pt-4">
+                <a
+                  href="https://buy.onramper.com/?defaultCrypto=USDT&network=polygon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
+                  <Button
+                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
+                    size="lg"
                   >
-                    <Button
-                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
-                      size="lg"
-                    >
-                      Buy MATIC with Card
-                    </Button>
-                  </a>
-                  <a
-                    href="https://buy.onramper.com/?defaultCrypto=USDT&network=polygon"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block"
-                  >
-                    <Button
-                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold"
-                      size="lg"
-                    >
-                      Buy USDT with Card
-                    </Button>
-                  </a>
-                </div>
+                    Buy MATIC/USDT with Card
+                  </Button>
+                </a>
               </div>
 
               {/* Note */}
               <div className="bg-background/50 border border-border/30 rounded-lg p-4">
                 <p className="text-xs text-muted-foreground text-center">
-                  Card purchases are handled by third-party providers. You'll
-                  receive MATIC/USDT in your wallet.
+                  Card purchases are handled by third-party providers.
                 </p>
               </div>
             </div>
