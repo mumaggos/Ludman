@@ -22,8 +22,10 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
-    target: "esnext",
+    target: "es2020",
     minify: "esbuild",
+    sourcemap: false,
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -31,14 +33,16 @@ export default defineConfig({
           if (id.includes('node_modules/wagmi')) return 'wagmi';
           if (id.includes('node_modules/viem')) return 'wagmi';
           if (id.includes('node_modules/@radix-ui')) return 'ui';
+          if (id.includes('node_modules/framer-motion')) return 'framer';
         },
       },
     },
     chunkSizeWarningLimit: 1000,
+    reportCompressedSize: false,
   },
   server: {
     port: 3000,
-    strictPort: false, // Will find next available port if 3000 is busy
+    strictPort: false,
     host: true,
     allowedHosts: [
       ".manuspre.computer",
@@ -52,6 +56,14 @@ export default defineConfig({
     fs: {
       strict: true,
       deny: ["**/.*"],
+    },
+    headers: {
+      'Cache-Control': 'public, max-age=3600',
+    },
+  },
+  preview: {
+    headers: {
+      'Cache-Control': 'public, max-age=3600',
     },
   },
 });

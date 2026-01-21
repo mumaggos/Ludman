@@ -1,12 +1,16 @@
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowLeft, Download, FileText } from "lucide-react";
+import { ArrowLeft, Download, FileText, Share2 } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useState } from "react";
+import { generateWhitepaperPDF, shareWhitepaperPDF } from "@/lib/pdf-generator";
 
 export default function Whitepaper() {
   const { t } = useLanguage();
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [isSharing, setIsSharing] = useState(false);
 
   const sections = [
     {
@@ -78,6 +82,30 @@ export default function Whitepaper() {
     visible: { opacity: 1, y: 0 }
   };
 
+  const handleDownload = async () => {
+    setIsDownloading(true);
+    try {
+      await generateWhitepaperPDF();
+    } catch (error) {
+      console.error('Download failed:', error);
+      alert('Failed to download PDF. Please try again.');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  const handleShare = async () => {
+    setIsSharing(true);
+    try {
+      await shareWhitepaperPDF();
+    } catch (error) {
+      console.error('Share failed:', error);
+      alert('Failed to share PDF. Please try again.');
+    } finally {
+      setIsSharing(false);
+    }
+  };
+
   return (
     <Layout>
       {/* Header Section */}
@@ -124,24 +152,29 @@ export default function Whitepaper() {
               <Button 
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold"
+                onClick={handleDownload}
+                disabled={isDownloading}
               >
                 <Download className="mr-2 h-5 w-5" />
-                {t('whitepaper.download')}
+                {isDownloading ? 'Downloading...' : t('whitepaper.download')}
               </Button>
               <Button 
                 size="lg"
                 variant="outline"
                 className="border-primary/50 text-primary hover:bg-primary/10"
+                onClick={handleShare}
+                disabled={isSharing}
               >
-                {t('whitepaper.share')}
+                <Share2 className="mr-2 h-5 w-5" />
+                {isSharing ? 'Sharing...' : t('whitepaper.share')}
               </Button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Content Sections */}
-      <section className="py-20">
+      {/* Content Sections - Wrapped for PDF generation */}
+      <section className="py-20" id="whitepaper-content">
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
             variants={containerVariants}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+      content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=yes, viewport-fit=cover" />
     <title>Lubdan - Where Strategy Meets Luck | Polygon Investment Platform</title>
     <meta name="description" content="Lubdan: Premium Polygon investment platform offering real MATIC dividends from casino profits. Transparent, on-chain, and secure. Join the presale now." />
     <meta name="keywords" content="Lubdan, Polygon, MATIC, Crypto Dividends, Presale, Investment, Casino Yield, Real Yield" />
@@ -39,6 +39,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     
+    <!-- Safari optimization -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Lubdan">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=%VITE_ANALYTICS_ID%"></script>
     <script>
@@ -57,11 +64,12 @@
   <body>
     <div id="root"></div>
     <noscript>This site requires JavaScript to be enabled.</noscript>
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx" defer></script>
     <script
       defer
       src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"
+      data-auto-track="false"></script>
   </body>
 
 </html>
