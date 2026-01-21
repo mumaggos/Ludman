@@ -89,7 +89,7 @@ export default function PresaleWidget() {
   };
 
   const openTransak = () => {
-    const transakUrl = "https://global.transak.com/?cryptoCurrencyCode=MATIC&networks=polygon&defaultCryptoCurrency=MATIC&defaultNetwork=polygon";
+    const transakUrl = "https://global.transak.com/?defaultCryptoCurrency=MATIC&networks=polygon";
     window.open(transakUrl, "_blank");
   };
 
