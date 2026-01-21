@@ -238,7 +238,7 @@ export default function Whitepaper() {
                   {t('whitepaper.join_presale')}
                 </Button>
               </Link>
-              <a href="https://t.me/ludban_lbd" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/LubdanOfficial" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-primary/50 text-primary hover:bg-primary/10">
                   {t('whitepaper.join_community')}
                 </Button>

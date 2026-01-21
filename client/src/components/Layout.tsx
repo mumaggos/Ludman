@@ -166,8 +166,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Button>
             
             <div className="mt-auto mb-8 flex justify-center gap-6">
-              <a href="https://t.me/ludban_lbd" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
+              <a href="https://x.com/ludbanlbd?s=21" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
+                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://t.me/LubdanOfficial" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary">
                 <Send size={24} />
+              </a>
+              <a href="mailto:lubdan.info@gmail.com" className="text-muted-foreground hover:text-primary">
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
               </a>
             </div>
           </motion.div>
@@ -195,7 +201,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <a href="https://x.com/ludbanlbd?s=21" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
-                <a href="https://t.me/ludban_lbd" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
+                <a href="https://t.me/LubdanOfficial" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
                   <Send size={18} />
                 </a>
                 <a href="mailto:lubdan.info@gmail.com" className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-all">
