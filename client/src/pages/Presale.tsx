@@ -116,7 +116,6 @@ export default function Presale() {
               className="space-y-8"
             >
               <PresaleWidget />
-              <HowToBuyCollapsible />
             </motion.div>
           </div>
         </div>

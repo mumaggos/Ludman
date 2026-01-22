@@ -89,7 +89,7 @@ export default function HowToBuyCollapsible() {
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold">2.</span>
-                      <span>In the provider, select MATIC or USDT and choose Polygon network</span>
+                      <span>In the provider, select MATIC or USDT on Polygon network</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary font-bold">3.</span>
