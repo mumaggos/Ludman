@@ -17,6 +17,7 @@ import Roadmap from "./pages/Roadmap";
 import FAQ from "./pages/FAQ";
 import Whitepaper from "./pages/Whitepaper";
 import SocialFloatingButtons from "./components/SocialFloatingButtons";
+import { Analytics } from "@vercel/analytics/react";
 
 
 
@@ -58,6 +59,7 @@ function App() {
               <TooltipProvider>
                 <Toaster />
                 <Router />
+                <Analytics />
               </TooltipProvider>
             </ThemeProvider>
           </QueryClientProvider>
