@@ -3,8 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, CheckCircle, AlertCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Newsletter() {
+  const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
@@ -14,7 +16,7 @@ export default function Newsletter() {
     
     if (!email || !email.includes("@")) {
       setStatus("error");
-      setMessage("Please enter a valid email address");
+      setMessage(t('home.newsletter.invalid_email') || "Please enter a valid email address");
       return;
     }
 
@@ -39,7 +41,7 @@ export default function Newsletter() {
 
       if (response.ok) {
         setStatus("success");
-        setMessage("Thank you for subscribing!");
+        setMessage(t('home.newsletter.success') || "Thank you for subscribing!");
         setEmail("");
         
         // Also save to local storage as backup
@@ -58,11 +60,11 @@ export default function Newsletter() {
         setTimeout(() => setStatus("idle"), 3000);
       } else {
         setStatus("error");
-        setMessage("Failed to subscribe. Please try again.");
+        setMessage(t('home.newsletter.error') || "Failed to subscribe. Please try again.");
       }
     } catch (error) {
       setStatus("error");
-      setMessage("An error occurred. Please try again later.");
+      setMessage(t('home.newsletter.error_occurred') || "An error occurred. Please try again later.");
     }
   };
 
@@ -82,18 +84,18 @@ export default function Newsletter() {
                 <Mail className="h-6 w-6 text-primary" />
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-                Stay Updated
+                {t('home.newsletter.title')}
               </h2>
             </div>
 
             <p className="text-muted-foreground mb-8 text-lg">
-              Subscribe to our newsletter to receive the latest updates about Lubdan, presale phases, and exclusive opportunities.
+              {t('home.newsletter.subtitle')}
             </p>
 
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
               <Input
                 type="email"
-                placeholder="Enter your email address"
+                placeholder={t('home.newsletter.placeholder')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={status === "loading"}
@@ -104,7 +106,7 @@ export default function Newsletter() {
                 disabled={status === "loading" || status === "success"}
                 className="h-12 px-8 bg-primary hover:bg-primary/90 text-primary-foreground font-bold rounded-lg transition-all disabled:opacity-50"
               >
-                {status === "loading" ? "Subscribing..." : "Subscribe"}
+                {status === "loading" ? t('home.newsletter.subscribing') : t('home.newsletter.subscribe')}
               </Button>
             </form>
 
@@ -134,7 +136,7 @@ export default function Newsletter() {
             </AnimatePresence>
 
             <p className="text-xs text-muted-foreground/70 mt-6">
-              We respect your privacy. Unsubscribe at any time.
+              {t('home.newsletter.privacy')}
             </p>
           </motion.div>
         </div>
