@@ -125,7 +125,7 @@ export default function Home() {
                   <TrendingUp size={20} />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wider">Current Phase</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider">{t('home.current_phase')}</p>
                   <p className="font-display font-bold text-lg text-foreground">
                     Phase {currentPhase}
                   </p>

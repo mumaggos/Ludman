@@ -2,9 +2,11 @@ import { useState } from "react";
 import { ChevronDown, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HowToBuyCollapsible() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
 
   return (
     <div className="w-full space-y-4">
@@ -17,19 +19,8 @@ export default function HowToBuyCollapsible() {
       >
         <div className="text-left">
           <p className="text-lg font-display font-bold text-foreground">
-            Need MATIC or USDT?
+            {t('home.need_crypto')}
           </p>
-          <div className="flex gap-3 mt-2">
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsOpen(true);
-              }}
-              className="text-sm text-primary hover:text-secondary transition-colors underline"
-            >
-              How it works
-            </button>
-          </div>
         </div>
         <ChevronDown
           className={`h-6 w-6 text-primary transition-transform duration-300 group-hover:text-secondary ${
