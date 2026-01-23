@@ -49,6 +49,11 @@ const translations: Record<Language, Record<string, string>> = {
     'home.features.deflationary.title': 'Deflationary Mechanics',
     'home.features.deflationary.desc': 'Strategic buybacks and burns from casino revenue ensure long-term value appreciation for holders.',
     
+    // Listed On
+    'home.listed_on.title': 'Listed On',
+    'home.listed_on.subtitle': 'Discover Lubdan on major crypto platforms',
+    'home.listed_on.coming_soon': 'Coming Soon',
+    
     // Navigation
     'nav.home': 'Home',
     'nav.presale': 'Presale',
@@ -518,6 +523,11 @@ const translations: Record<Language, Record<string, string>> = {
     'home.features.deflationary.title': 'Mécanique Déflationniste',
     'home.features.deflationary.desc': 'Les rachats stratégiques et les brûlures des revenus du casino garantissent une appréciation de la valeur à long terme pour les détenteurs.',
     
+    // Listé sur
+    'home.listed_on.title': 'Listé sur',
+    'home.listed_on.subtitle': 'Découvrez Lubdan sur les principales plateformes de crypto',
+    'home.listed_on.coming_soon': 'Bientôt',
+
     // Navigation
     'nav.home': 'Accueil',
     'nav.presale': 'Prévente',
@@ -746,6 +756,11 @@ const translations: Record<Language, Record<string, string>> = {
     'home.features.deflationary.title': 'Deflationäre Mechanik',
     'home.features.deflationary.desc': 'Strategische Rückkäufe und Verbrennungen aus Casino-Einnahmen gewährleisten langfristige Wertsteigerung für Inhaber.',
     
+    // Gelistet auf
+    'home.listed_on.title': 'Gelistet auf',
+    'home.listed_on.subtitle': 'Entdecken Sie Lubdan auf großen Krypto-Plattformen',
+    'home.listed_on.coming_soon': 'Bald verfügbar',
+
     // Navigation
     'nav.home': 'Startseite',
     'nav.presale': 'Presale',
