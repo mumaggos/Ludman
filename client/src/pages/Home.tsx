@@ -7,6 +7,7 @@ import { ArrowRight, ShieldCheck, TrendingUp, Coins, Zap } from "lucide-react";
 import { Link } from "wouter";
 
 import Newsletter from "@/components/Newsletter";
+import ListedOn from "@/components/ListedOn";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Home() {
@@ -188,6 +189,9 @@ export default function Home() {
 
       {/* Newsletter Section */}
       <Newsletter />
+
+      {/* Listed On Section */}
+      <ListedOn />
 
       {/* Features Section */}
       <section className="py-24 relative">
