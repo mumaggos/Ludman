@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /dashboard
 
-Sitemap: https://lubdan.io/sitemap.xml
+Sitemap: https://lubdan.com/sitemap.xml

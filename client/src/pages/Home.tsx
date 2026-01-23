@@ -1,4 +1,4 @@
-import Layout from "@/components/Layout";
+import LayoutNoWeb3 from "@/components/LayoutNoWeb3";
 import Mascot3D from "@/components/Mascot3D";
 import { Button } from "@/components/ui/button";
 import { usePresaleData } from "@/hooks/usePresale";
@@ -33,7 +33,7 @@ export default function Home() {
   };
 
   return (
-    <Layout>
+    <LayoutNoWeb3>
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center justify-center pt-10 pb-20">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -218,7 +218,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </Layout>
+    </LayoutNoWeb3>
   );
 }
 
