@@ -1,5 +1,4 @@
 import Layout from "@/components/Layout";
-import { Web3Provider } from "@/contexts/Web3Provider";
 import PresaleWidget from "@/components/PresaleWidget";
 import HowToBuyCollapsible from "@/components/HowToBuyCollapsible";
 import { usePresaleData } from "@/hooks/usePresale";
@@ -18,8 +17,7 @@ export default function Presale() {
   const phase2Sold = phase2Total - phase2Remaining;
 
   return (
-    <Web3Provider>
-      <Layout>
+    <Layout>
       <div className="min-h-screen pt-20 pb-20 relative overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 z-0">
@@ -122,7 +120,6 @@ export default function Presale() {
           </div>
         </div>
       </div>
-      </Layout>
-    </Web3Provider>
+    </Layout>
   );
 }

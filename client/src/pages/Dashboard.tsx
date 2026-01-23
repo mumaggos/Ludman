@@ -1,5 +1,4 @@
 import Layout from "@/components/Layout";
-import { Web3Provider } from "@/contexts/Web3Provider";
 import { useAccount, useBalance, useReadContract } from "wagmi";
 import { useDividendsData, useDividendActions } from "@/hooks/useDividends";
 import { CONTRACTS, TOKEN_ABI } from "@/lib/contracts";
@@ -63,8 +62,7 @@ export default function Dashboard() {
   }
 
   return (
-    <Web3Provider>
-      <Layout>
+    <Layout>
       <div className="min-h-screen pt-12 pb-20">
         <div className="container mx-auto px-4">
           <div className="mb-12">
@@ -196,7 +194,6 @@ export default function Dashboard() {
           </motion.div>
         </div>
       </div>
-      </Layout>
-    </Web3Provider>
+    </Layout>
   );
 }

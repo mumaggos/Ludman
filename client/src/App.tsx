@@ -1,5 +1,7 @@
 import { Toaster } from "@/components/ui/sonner";
+import { WagmiProvider } from 'wagmi';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { config } from './lib/wagmi';
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
@@ -50,14 +52,16 @@ function App() {
   return (
     <ErrorBoundary>
       <LanguageProvider>
-        <QueryClientProvider client={queryClient}>
-          <ThemeProvider defaultTheme="dark" storageKey="lubdan-theme">
-            <TooltipProvider>
-              <Toaster />
-              <Router />
-            </TooltipProvider>
-          </ThemeProvider>
-        </QueryClientProvider>
+        <WagmiProvider config={config}>
+          <QueryClientProvider client={queryClient}>
+            <ThemeProvider defaultTheme="dark" storageKey="lubdan-theme">
+              <TooltipProvider>
+                <Toaster />
+                <Router />
+              </TooltipProvider>
+            </ThemeProvider>
+          </QueryClientProvider>
+        </WagmiProvider>
       </LanguageProvider>
     </ErrorBoundary>
   );
