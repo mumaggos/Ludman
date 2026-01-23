@@ -292,6 +292,11 @@ const translations: Record<Language, Record<string, string>> = {
     'home.features.deflationary.title': 'Mecânica Deflacionária',
     'home.features.deflationary.desc': 'Recompras estratégicas e queimas da receita do cassino garantem apreciação de valor de longo prazo para os detentores.',
     
+    // Listado Em
+    'home.listed_on.title': 'Listado Em',
+    'home.listed_on.subtitle': 'Descubra Lubdan em principais plataformas de criptografia',
+    'home.listed_on.coming_soon': 'Em Breve',
+    
     // Navigation
     'nav.home': 'Início',
     'nav.presale': 'Pré-venda',
@@ -986,6 +991,11 @@ const translations: Record<Language, Record<string, string>> = {
     'home.features.deflationary.title': '通缩机制',
     'home.features.deflationary.desc': '来自赌场收入的战略性回购和销毁确保持有者的长期价值升值。',
     
+    // 上市
+    'home.listed_on.title': '上市',
+    'home.listed_on.subtitle': '在主要加密平台上发现Lubdan',
+    'home.listed_on.coming_soon': '即将推出',
+    
     // Navigation
     'nav.home': '首页',
     'nav.presale': '预售',
@@ -1210,6 +1220,11 @@ const translations: Record<Language, Record<string, string>> = {
     'home.features.secure.desc': 'すべてのコントラクトはPolygonscanで検証されています。流動性はロックされ、チームトークンは10ヶ月間線形に付与されます。',
     'home.features.deflationary.title': 'デフレーションメカニクス',
     'home.features.deflationary.desc': 'カジノ収益からの戦略的買戻しと焼却により、ホルダーの長期的な価値上昇を確保します。',
+    
+    // リストされている
+    'home.listed_on.title': 'リストされている',
+    'home.listed_on.subtitle': '主要な暗号プラットフォームでLubdanを発見',
+    'home.listed_on.coming_soon': '近日公開予定',
     
     // Navigation
     'nav.home': 'ホーム',
