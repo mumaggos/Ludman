@@ -117,15 +117,14 @@ export default function Tokenomics() {
                   <h3 className="text-lg font-semibold mb-4 text-foreground">
                     {t('tokenomics.distribution.pie_title')}
                   </h3>
-                  <ResponsiveContainer width="100%" height={300}>
+                  <ResponsiveContainer width="100%" height={350}>
                     <PieChart>
                       <Pie
                         data={supplyDistribution}
                         cx="50%"
-                        cy="50%"
+                        cy="45%"
                         labelLine={false}
-                        label={({ name, value }) => `${name}: ${value}%`}
-                        outerRadius={100}
+                        outerRadius={80}
                         fill="#8884d8"
                         dataKey="value"
                       >
@@ -134,6 +133,12 @@ export default function Tokenomics() {
                         ))}
                       </Pie>
                       <Tooltip content={<CustomTooltip />} />
+                      <Legend 
+                        verticalAlign="bottom" 
+                        height={36}
+                        formatter={(value, entry: any) => `${entry.payload.name}: ${entry.payload.value}%`}
+                        wrapperStyle={{ fontSize: '12px' }}
+                      />
                     </PieChart>
                   </ResponsiveContainer>
                 </div>
@@ -250,15 +255,14 @@ export default function Tokenomics() {
 
               {/* Casino Revenue Pie Chart */}
               <div className="flex flex-col items-center mb-8">
-                <ResponsiveContainer width="100%" height={300}>
+                <ResponsiveContainer width="100%" height={350}>
                   <PieChart>
                     <Pie
                       data={casinoRevenue}
                       cx="50%"
-                      cy="50%"
+                      cy="45%"
                       labelLine={false}
-                      label={({ name, value }) => `${name}: ${value}%`}
-                      outerRadius={100}
+                      outerRadius={80}
                       fill="#8884d8"
                       dataKey="value"
                     >
@@ -267,6 +271,12 @@ export default function Tokenomics() {
                       ))}
                     </Pie>
                     <Tooltip content={<CustomTooltip />} />
+                    <Legend 
+                      verticalAlign="bottom" 
+                      height={36}
+                      formatter={(value, entry: any) => `${entry.payload.name}: ${entry.payload.value}%`}
+                      wrapperStyle={{ fontSize: '12px' }}
+                    />
                   </PieChart>
                 </ResponsiveContainer>
               </div>
