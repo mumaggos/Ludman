@@ -16,6 +16,7 @@ import Dividends from "./pages/Dividends";
 import Roadmap from "./pages/Roadmap";
 import FAQ from "./pages/FAQ";
 import Whitepaper from "./pages/Whitepaper";
+import Tokenomics from "./pages/Tokenomics";
 import SocialFloatingButtons from "./components/SocialFloatingButtons";
 
 
@@ -31,6 +32,7 @@ function Router() {
         <Route path={"/roadmap"} component={Roadmap} />
         <Route path={"/faq"} component={FAQ} />
         <Route path={"/whitepaper"} component={Whitepaper} />
+        <Route path={"/tokenomics"} component={Tokenomics} />
         <Route path={"/admin"} component={Admin} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
