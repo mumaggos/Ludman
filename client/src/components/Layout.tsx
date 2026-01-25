@@ -31,6 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { labelKey: "nav.presale", path: "/presale" },
     { labelKey: "nav.dashboard", path: "/dashboard" },
     { labelKey: "nav.dividends", path: "/dividends" },
+    { labelKey: "nav.tokenomics", path: "/tokenomics" },
     { labelKey: "nav.roadmap", path: "/roadmap" },
     { labelKey: "nav.faq", path: "/faq" },
     { labelKey: "nav.whitepaper", path: "/whitepaper" },
@@ -226,6 +227,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <h4 className="font-display text-lg font-bold mb-6 text-foreground">{t('footer.resources')}</h4>
               <ul className="space-y-3">
+                <li>
+                  <Link href="/tokenomics">
+                    <a className="text-muted-foreground hover:text-primary transition-colors">{t('nav.tokenomics')}</a>
+                  </Link>
+                </li>
                 <li>
                   <Link href="/faq">
                     <a className="text-muted-foreground hover:text-primary transition-colors">{t('nav.faq')}</a>
