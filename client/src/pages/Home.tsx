@@ -178,7 +178,7 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden border border-primary/20 shadow-2xl glass-card">
               <img 
-                src="/images/lubdan-treasure.png" 
+                src="/images/IMG_2912.webp" 
                 alt="Lubdan Treasure" 
                 className="w-full h-full object-cover"
               />
