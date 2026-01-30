@@ -10,7 +10,7 @@ export default function Mascot3D() {
       
       {/* Mascot Image with floating animation */}
       <motion.img 
-        src="/leprechaun-lubdan.png" 
+        src="/IMG_2911.webp" 
         alt="Lubdan Mascot" 
         className="relative w-full h-full object-contain drop-shadow-[0_0_40px_rgba(0,255,65,0.3)] z-20"
         animate={{
