@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div className="min-h-screen flex flex-col relative overflow-hidden">
       {/* Background Elements */}
       <div className="fixed inset-0 z-[-1] pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/background.png')] bg-cover bg-center opacity-20 mix-blend-overlay" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/IMG_2903.webp')] bg-cover bg-center opacity-20 mix-blend-overlay" />
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[100px]" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-secondary/10 rounded-full blur-[100px]" />
       </div>
